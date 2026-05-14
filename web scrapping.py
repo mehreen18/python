@@ -3,14 +3,14 @@ print("hiiiiii")
 import requests
 from bs4 import BeautifulSoup
 
-# Step 1: Page fetch karo
+
 url = "https://books.toscrape.com/"
 page = requests.get(url)
 
-# Step 2: HTML parse karo
+
 soup = BeautifulSoup(page.content, "html.parser")
 
-# Step 3: Data nikalo
+
 title = soup.find("h1")
 print(title.text)
 
